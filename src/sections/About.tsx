@@ -1,7 +1,6 @@
 'use client';
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
-import StarIcon from "@/assets/icons/star.svg";
 import bookImage from '@/assets/images/book-cover.png';
 import Image from "next/image";
 import JavascriptIcon from '@/assets/icons/square-js.svg';
@@ -10,13 +9,12 @@ import CssIcon from "@/assets/icons/css3.svg";
 import HTMLIcon from '@/assets/icons/html5.svg';
 import ChromeIcon from '@/assets/icons/chrome.svg';
 import GithubIcon from '@/assets/icons/github.svg'
-import TechIcon from "@/components/TechIcon";
 import mapImage from '@/assets/images/map.png';
 import smileMemoji from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+import { useRef, useEffect} from "react";
 
 
 const toolboxItems = [
@@ -96,9 +94,19 @@ const hobbies = [
 
 export const AboutSection = () => {
   const constainRef = useRef(null);
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { once: true });
 
+  const bookFade = useAnimation()
+
+  useEffect(() => {
+    if(isInView){
+      bookFade.start("visible")
+    }
+  }, [isInView]);
+    
   return (
-    <div className="pb-20 pt-20">
+    <div id="about" className="pb-20 pt-20">
 
       <div className="container">
         <SectionHeader
@@ -112,7 +120,21 @@ export const AboutSection = () => {
             <Card className="h-[320px] flex-shrink-0 mb-6 md:mb-0 md:pt-6">
               <CardHeader title="My Reads" description="Explore the books shaping my perspectives"/>
               <div className="w-40 mx-auto mt-8">
-                <Image src={bookImage} alt="book cover"/>
+                <motion.div
+                  ref={imageRef}
+                  variants={{
+                    hidden: { opacity: 0, x: -100 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={bookFade}
+                  transition={{
+                    duration: 0.5, delay:0.25
+                  }}
+                >
+                  <Image src={bookImage} alt="book cover"/>
+                </motion.div>
+
               </div>
             </Card>
             <Card className="h-[320px] w-full ">

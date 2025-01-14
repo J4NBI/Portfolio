@@ -29,7 +29,8 @@ const config: Config = {
         "ping-large": "ping-large 1s ease-in-out infinite",
         "move-left": "move-left 1s linear infinite",
         "move-left-two": "move-left-two 1s linear infinite",
-        "move-right": "move-right 1s linear infinite"
+        "move-right": "move-right 1s linear infinite",
+        "bounceClick": 'bounceClick 0.3s ease-in-out',
       },
       keyframes: {
         "ping-large": {
@@ -61,6 +62,10 @@ const config: Config = {
           "100%": {
             transform: "translateX(-1%)",
           },
+        },
+        "bounceClick": {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.9)' },
         },
       },
     },
