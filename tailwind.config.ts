@@ -27,7 +27,9 @@ const config: Config = {
       },
       animation: {
         "ping-large": "ping-large 1s ease-in-out infinite",
-        "move-left": "move-left 1s linear infinite"
+        "move-left": "move-left 1s linear infinite",
+        "move-left-two": "move-left-two 1s linear infinite",
+        "move-right": "move-right 1s linear infinite"
       },
       keyframes: {
         "ping-large": {
@@ -43,7 +45,23 @@ const config: Config = {
           "100%": {
             transform: "translateX(-50%)",
           }
-        }
+        },
+        "move-left-two": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-300%)",
+          }
+        },
+        "move-right": {
+          "0%": {
+            transform: "translateX(-300%)",
+          },
+          "100%": {
+            transform: "translateX(-1%)",
+          },
+        },
       },
     },
   },

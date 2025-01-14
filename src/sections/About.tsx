@@ -14,6 +14,7 @@ import mapImage from '@/assets/images/map.png';
 import smileMemoji from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
+import { motion } from "framer-motion";
 
 
 const toolboxItems = [
@@ -112,8 +113,8 @@ export const AboutSection = () => {
             </Card>
             <Card className="h-[320px] w-full ">
               <CardHeader className="md:px-6 md:pt-0" title="My Toolbox" description="Explore the technologies and tools I use to create digital experinces."/>
-              <ToolboxItems items={toolboxItems} className="mt-6 md:mt-10"/>
-              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName=" -translate-x-1/2"/>
+              <ToolboxItems items={toolboxItems} className="mt-6 md:mt-10" itemsWrapperClassName="animate-move-left-two [animation-duration:35s]"/>
+              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName=" -translate-x-1/2 animate-move-right [animation-duration:35s]"/>
             </Card>
           </div>
 
@@ -122,7 +123,7 @@ export const AboutSection = () => {
             <CardHeader className="px-6 py-6" title="Beyond the Code" description="Explore my interests and hobbies besyyond the digital realm."/>
             <div className="relative flex-1">
                 {hobbies.map(hobby => (
-                  <div className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
+                  <div  className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
                   style={{
                     left: hobby.left,
                     top: hobby.top
@@ -139,6 +140,7 @@ export const AboutSection = () => {
             <Card className="h-[320px] p-0 relative">
                 <Image className="h-full w-full object-cover object-left-top" src={mapImage} alt="map" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 ">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
                   <Image className="size-20 " src={smileMemoji} alt="smile Emoji" />
                 </div>
             </Card>
