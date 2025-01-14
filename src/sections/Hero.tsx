@@ -18,24 +18,27 @@ export const HeroSection = () => {
     <div className='hero-ring size-[1120px]'></div>
     <div className='hero-ring size-[1320px]'></div>
 
-    <HeroOrbit size={800} rotation={-72}>
+    <HeroOrbit size={800} rotation={-72} spinDuration='50s' shouldOrbit={true}>
       <StarIcon className="size-28 text-emerald-300" />
     </HeroOrbit>
 
-    <HeroOrbit size={550} rotation={20}>
+    <HeroOrbit size={600} rotation={20} spinDuration='40s' shouldOrbit={true}>
     <StarIcon className="size-12 text-emerald-300" />
     </HeroOrbit>
 
-    <HeroOrbit size={590} rotation={98}>
+    <HeroOrbit size={560} rotation={98} spinDuration='30s' shouldOrbit={true}>
     <StarIcon className="size-8 text-emerald-300" />
     </HeroOrbit>
+    
     
 
     <div className="container">
       <div className='flex flex-col items-center'>
         <Image src={memojiImage} className='size-[200px]' alt='Person peeking from behind laptop'/>
         <div className='bg-gray-950 border-gray-800 px-4 py-1.5 items-center gap-4 inline-flex rounded-lg'>
-          <div className='bg-green-500 size-2.5 rounded-full'></div>
+          <div className='bg-green-500 size-2.5 rounded-full relative'>
+            <div className='absolute inset-0 bg-green-500 rounded-full animate-ping-large'></div>
+          </div>
           <div className='text-sm font-semibold'>Availabel for new projects</div>
         </div>
       </div>
