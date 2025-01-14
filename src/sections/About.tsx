@@ -1,3 +1,4 @@
+'use client';
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
@@ -15,6 +16,7 @@ import smileMemoji from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 
 const toolboxItems = [
@@ -93,6 +95,8 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constainRef = useRef(null);
+
   return (
     <div className="pb-20 pt-20">
 
@@ -121,19 +125,21 @@ export const AboutSection = () => {
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <Card className="h-[320px] p-0 flex flex-col mb-6">
             <CardHeader className="px-6 py-6" title="Beyond the Code" description="Explore my interests and hobbies besyyond the digital realm."/>
-            <div className="relative flex-1">
+            <div className="relative flex-1" ref={constainRef}>
                 {hobbies.map(hobby => (
-                  <div  className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
+                  <motion.div  className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
                   style={{
                     left: hobby.left,
                     top: hobby.top
                   }}
+                  drag
+                  dragConstraints={constainRef}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
