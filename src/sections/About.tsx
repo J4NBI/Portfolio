@@ -149,19 +149,21 @@ export const AboutSection = () => {
             <CardHeader className="px-6 py-6" title="Beyond the Code" description="Explore my interests and hobbies besyyond the digital realm."/>
             <div className="relative flex-1" ref={constainRef}>
                 {hobbies.map(hobby => (
-                  <motion.div  className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
-                  style={{
-                    left: hobby.left,
-                    top: hobby.top
-                  }}
-                  drag
-                  dragConstraints={constainRef}
-                  >
-                    <span className="font-medium text-gray-950">
-                      {hobby.title}
-                    </span>
-                    <span>{hobby.emoji}</span>
-                  </motion.div>
+                  <div key={hobby.title} >
+                    <motion.div className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top
+                    }}
+                    drag
+                    dragConstraints={constainRef}
+                    >
+                      <span className="font-medium text-gray-950">
+                        {hobby.title}
+                      </span>
+                      <span>{hobby.emoji}</span>
+                    </motion.div>
+                  </div>
                 ))}
               </div>
             </Card>
