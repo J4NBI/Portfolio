@@ -49,14 +49,15 @@ export default function ContactFormPreview() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
       console.log(values)
       sendEmail(values);
+      form.reset();
   };
 
   return (
-    <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-4">
-      <Card className="mx-auto max-w-md">
+    <div id="form" className="flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4">
+      <Card className="mx-auto max-w-md bg-gray-800 text-white ">
         <CardHeader>
           <CardTitle className="text-2xl">Contact Us</CardTitle>
-          <CardDescription>
+          <CardDescription className='text-white'>
             Please fill out the form below and we will get back to you shortly.
           </CardDescription>
         </CardHeader>
@@ -126,7 +127,7 @@ export default function ContactFormPreview() {
                   )}
                 />
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-32 mx-auto">
                   Send Message
                 </Button>
               </div>

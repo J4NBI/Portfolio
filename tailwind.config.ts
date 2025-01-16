@@ -22,6 +22,9 @@ const config: Config = {
   		}
   	},
   	extend: {
+			boxShadow: {
+        '3xl': '0 0 10px rgba(0,0,0,1.3), inset 0 0 5px rgba(0,0,0,1.3),  0px 0 80px rgba(52, 211, 153,0.5), 0px 0 20px rgba(0, 0, 255,0.5)',
+      },
   		fontFamily: {
   			sans: 'var(--font-sans)',
   			serif: 'var(--font-serif)'

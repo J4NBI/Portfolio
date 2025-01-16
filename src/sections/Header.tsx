@@ -10,7 +10,7 @@ export const Header = () => {
       {
         name: "Home",
         url: "#home",
-        active: false
+        active: true
       },
       {
         name: "Projects",

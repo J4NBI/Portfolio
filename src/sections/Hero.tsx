@@ -1,5 +1,5 @@
 "use client";
-import memojiImage from "@/assets/images/memoji-computer.png";
+import memojiImage from "@/assets/images/jan_alpha.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -132,7 +132,7 @@ export const HeroSection = () => {
                 }}
                 whileTap={{ scale: 0.9, rotate: 3 }}
               >
-                <span className="font-semibold">Explore My Work</span>
+                <span className="font-semibold"><a href="#projects">Explore My Work</a></span>
                 <ArrowDown className="size-4" />
               </motion.button>
             </motion.div>
@@ -155,7 +155,7 @@ export const HeroSection = () => {
                 }}
               >
                 <span>👋</span>
-                <span className="font-semibold">Let's Connect</span>
+                <span className="font-semibold"><a href="#form"></a>Let's Connect</span>
               </motion.button>
             </motion.div>
           </div>
