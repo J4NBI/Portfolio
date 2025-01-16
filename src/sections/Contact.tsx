@@ -19,7 +19,7 @@ export const ContactSection = () => {
             </div>
             <div className='md:self-start md:mt-4 lg:-mt-2'>
               <button className='text-white bg-gray-900 inline-flex justify-center text-center items-center px-6 h-12 rounded-xl gap-2 mt-8 w-max border border-gray-900'>
-                <span className='font-semibold'>Contact Me</span>
+                <a href="#form" className='font-semibold'>Contact Me</a>
                 <ArrowUpRight className="size-4" />
               </button>
             </div>

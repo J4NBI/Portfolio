@@ -3,7 +3,7 @@
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { toast } from '@/hooks/use-toast'
+
 
 import {
   Form,
@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { sendEmail } from '@/app/api/send-email'
 
 // Schema for contact form validation
 const formSchema = z.object({
@@ -35,7 +36,7 @@ const formSchema = z.object({
     .min(10, { message: 'Message must be at least 10 characters long' }),
 })
 
-export default function ContactForm() {
+export default function ContactFormPreview() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -43,18 +44,12 @@ export default function ContactForm() {
       email: '',
       message: '',
     },
-  })
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      // Simulate a successful contact form submission
       console.log(values)
-      toast.success('Your message has been sent successfully!')
-    } catch (error) {
-      console.error('Error submitting contact form', error)
-      toast.error('Failed to send your message. Please try again.')
-    }
-  }
+      sendEmail(values);
+  };
 
   return (
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center px-4">
