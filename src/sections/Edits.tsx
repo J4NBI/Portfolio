@@ -2,13 +2,11 @@
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import { Fragment } from "react";
+import YouTube from 'react-youtube';
 
 import YoutubeIcon from "@/assets/images/youtube.png";
 import Image from "next/image";
-
-import jp from '@/assets/images/jp.webp'
-
-
+import jp from "@/assets/images/videos/jp.webp";
 
 //SHADCN
 
@@ -88,7 +86,7 @@ export const EditsSection = () => {
                           <DialogContent className="sm:max-w-[700px] text-black bg-none">
                             <h1>{edit.text}</h1>
                             <div className="flex items-center justify-center">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZYHGHuGoFZQ?si=OXWl6CzHcUo05pBJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZYHGHuGoFZQ?si=OXWl6CzHcUo05pBJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                           </DialogContent>
                         </Dialog>
