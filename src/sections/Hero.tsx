@@ -101,14 +101,11 @@ export const HeroSection = () => {
               delay: 0.25,
             }}
           >
-            <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-              Building Exceptional User Experiences
+            <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide leading-10">
+            Frontend <span className="text-emerald-300 leading-10">Developer</span><br /> Editor
             </h1>
-            <p className="mt-4 text-center text-white/60 md:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
-              facere nobis explicabo molestiae repellendus quas consectetur
-              eligendi, debitis omnis praesentium commodi tenetur pariatur
-              nostrum neque tempora?
+            <p className="mt-4 text-center text-white/80 md:text-lg">
+            I am Jan, a creative mind from Berlin with a background in media design. After earning my degree as an editor at the Film Academy and spending years as a freelance editor, I discovered my passion for graphic design and web development. Today, I combine my technical expertise and creative vision to design unique, functional websites.
             </p>
           </motion.div>
 
@@ -155,7 +152,7 @@ export const HeroSection = () => {
                 }}
               >
                 <span>👋</span>
-                <span className="font-semibold"><a href="#form"></a>Let's Connect</span>
+                <span className="font-semibold"><a href="#contact">Let's Connect</a></span>
               </motion.button>
             </motion.div>
           </div>
