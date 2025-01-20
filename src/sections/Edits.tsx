@@ -24,29 +24,12 @@ const Edits = () => {
       link: "OBI_Mach_es_zu_deinem_Projekt_hxkodo",
     },
     {
-      name: "Mercedes Citan",
-      text: "Can",
-      logo: logo,
-      link: "Mercedes_Citan_kvqfxr",
-    },
-    {
       name: "CEDEO",
       text: "Bathroom",
       logo: logo,
       link: "CEDEO_FACTORY_k17ig4",
     },
-    {
-      name: "Swisscom",
-      text: "Under the bed",
-      logo: logo,
-      link: "Swisscom_as6fja",
-    },
-    {
-      name: "Review",
-      text: "New Jacket",
-      logo: logo,
-      link: "REVIEW_cwgn0x",
-    },
+    
   ];
 
   return (

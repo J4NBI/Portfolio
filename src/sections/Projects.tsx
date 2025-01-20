@@ -1,49 +1,62 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import modal from '@/assets/images/work/01_Login_Modal.png'
+import estate from '@/assets/images/work/02_Estate.png'
+import assembly from '@/assets/images/work/03_Assembly.png'
+import janbihl from '@/assets/images/work/04_JanBihl.png'
+
 import Image from "next/image";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
-import grainImage from '@/assets/images/grain.jpg'
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Modal",
+    year: "2024",
+    title: "Login Modal",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "HTML" },
+      { title: "CSS" },
+      { title: "Tailwind" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://j4nbi.github.io/login_modal_Tailwind/",
+    image: modal,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Estate",
+    year: "2024",
+    title: "Explore homes that fit your dreams",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "React" },
+      { title: "Tailwind" },
+      { title: "Motion" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://j4nbi.github.io/real-estate/",
+    image: estate,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Game",
+    year: "2024",
+    title: "Assembly Endgame",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "React" },
+      { title: "Hooks" },
+      { title: "Responsive" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://j4nbi.github.io/assembly_endgame_v2/",
+    image: assembly,
+  },
+  {
+    company: "Portfolio",
+    year: "2024",
+    title: "Next.js Portfolio",
+    results: [
+      { title: "Next.js" },
+      { title: "Hooks" },
+      { title: "Motion" },
+    ],
+    link: "#home",
+    image: janbihl,
   },
 ];
 
@@ -78,7 +91,7 @@ export const ProjectsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={project.link}>
+                <a href={project.link} target="_blank">
                   <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl
                   font-semibold flex justify-center gap-2 items-center mt-8 px-6">
                     <span>Visit Live Site</span>

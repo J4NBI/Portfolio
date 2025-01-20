@@ -55,7 +55,7 @@ export default function ContactFormPreview() {
   };
 
   return (
-    <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8">
+    <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8 z-50">
       <div className='max-w-xl mx-auto hidden md:block'>
           <h2 className='text-8xl'>✉️</h2>
         </div>

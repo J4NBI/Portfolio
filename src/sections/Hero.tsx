@@ -100,12 +100,13 @@ export const HeroSection = () => {
               delay: 0.25,
             }}
           >
-            <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide leading-10">
+            <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
               Frontend{" "}
               <span className="text-emerald-300 leading-10">Developer</span>
-              <hr className="my-2" />
-               Editor
+              {/* <hr className="my-2" /> */}
+               
             </h1>
+    
             <p className="mt-4 text-center text-white/80 md:text-lg">
               I am Jan, a creative mind from Berlin with a background in media
               design. After earning my degree as an editor at the Film Academy
