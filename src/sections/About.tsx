@@ -118,7 +118,7 @@ export const AboutSection = () => {
 
           <div className="md:flex items-center justify-center gap-8">
             <Card className="h-[320px] flex-shrink-0 mb-6 md:mb-0 md:pt-6">
-              <CardHeader title="My Reads" description="Explore the books shaping my perspectives"/>
+              <CardHeader title="My Reads" description="What I'm currently reading."/>
               <div className="w-40 mx-auto mt-8">
                 <motion.div
                   ref={imageRef}
