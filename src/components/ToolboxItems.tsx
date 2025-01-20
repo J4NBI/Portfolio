@@ -19,7 +19,7 @@ const ToolboxItems = ( {
   return (
     <div className={twMerge("flex[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]", className)}>
       <div className={twMerge("flex flex-none  py-0.5 gap-6 md:pr-6",  itemsWrapperClassName)}>
-        {[...new Array(4)].fill(0).map((_, index) => (
+        {[...new Array(8)].fill(0).map((_, index) => (
           <Fragment key={index}>
             {items.map((item) => (
           <div key={item.title} className="inline-flex items-center font-semibold gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">
