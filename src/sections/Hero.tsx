@@ -47,7 +47,7 @@ export const HeroSection = () => {
           >
             <StarIcon className="size-12 text-emerald-300" />
           </HeroOrbit>
-          
+
           <HeroOrbit
             size={540}
             rotation={98}
@@ -57,7 +57,6 @@ export const HeroSection = () => {
             <StarIcon className="size-8 text-emerald-300" />
           </HeroOrbit>
         </div>
-
 
         <div className="container z-100 md:-mt-20">
           <motion.div
@@ -102,58 +101,64 @@ export const HeroSection = () => {
             }}
           >
             <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide leading-10">
-            Frontend <span className="text-emerald-300 leading-10">Developer</span><br /> Editor
+              Frontend{" "}
+              <span className="text-emerald-300 leading-10">Developer</span>
+              <br /> Editor
             </h1>
             <p className="mt-4 text-center text-white/80 md:text-lg">
-            I am Jan, a creative mind from Berlin with a background in media design. After earning my degree as an editor at the Film Academy and spending years as a freelance editor, I discovered my passion for graphic design and web development. Today, I combine my technical expertise and creative vision to design unique, functional websites.
+              I am Jan, a creative mind from Berlin with a background in media
+              design. After earning my degree as an editor at the Film Academy
+              and spending years as a freelance editor, I discovered my passion
+              for graphic design and web development. Today, I combine my
+              technical expertise and creative vision to design unique,
+              functional websites.
             </p>
           </motion.div>
 
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-8">
-            
-            <motion.div
-              whileHover={{ scale: 1.1}}
-              whileTap={{ scale: 1 }}
-            >
-              <motion.button
-                className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{
-                  duration: 0.5,
-                  delay: 0.5,
-                }}
-                whileTap={{ scale: 0.9, rotate: 3 }}
-              >
-                <span className="font-semibold"><a href="#projects">Explore My Work</a></span>
-                <ArrowDown className="size-4" />
-              </motion.button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+              <a href="#projects">
+                <motion.button
+                  className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0 },
+                    visible: { opacity: 1, scale: 1 },
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.5,
+                  }}
+                  whileTap={{ scale: 0.9, rotate: 3 }}
+                >
+                  <span className="font-semibold">Explore My Work</span>
+                  <ArrowDown className="size-4" />
+                </motion.button>
+              </a>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.1}}
-              whileTap={{ scale: 1 }}
-            >
-              <motion.button
-                className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-8 rounded-xl"
-                variants={{
-                  hidden: { opacity: 0, scale: 0 },
-                  visible: { opacity: 1, scale: 1 },
-                }}
-                initial="hidden"
-                animate="visible"
-                transition={{
-                  duration: 0.5,
-                  delay: 0.8,
-                }}
-              >
-                <span>👋</span>
-                <span className="font-semibold"><a href="#contact">Let's Connect</a></span>
-              </motion.button>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+              <a href="#contact">
+                <motion.button
+                  className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-8 rounded-xl"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0 },
+                    visible: { opacity: 1, scale: 1 },
+                  }}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.8,
+                  }}
+                >
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span>👋</span>
+                    <span className="font-semibold">Let's Connect</span>
+                  </div>
+                </motion.button>
+              </a>
             </motion.div>
           </div>
         </div>
