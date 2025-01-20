@@ -1,6 +1,7 @@
 import ArrowUpRight from '@/assets/icons/arrow-up-right.svg'
 import grainImage from '@/assets/images/grain.jpg';
 
+
 export const ContactSection = () => {
   return (
     <div id="contact" className='py-16 pt-12 lg:py-24 lg:pt-20'>
@@ -18,10 +19,12 @@ export const ContactSection = () => {
               <p className='text-sm mt-2 text-center md:text-left md:text-base'>Ready to bring your next Project to Life? Let's connect and discuss how I can help you achieve your goals.</p>
             </div>
             <div className='md:self-start md:mt-4 lg:-mt-2'>
+            <a href="#form" className='font-semibold'>
               <button className='text-white bg-gray-900 inline-flex justify-center text-center items-center px-6 h-12 rounded-xl gap-2 mt-8 w-max border border-gray-900'>
-                <a href="#form" className='font-semibold'>Contact Me</a>
+                Contact Me
                 <ArrowUpRight className="size-4" />
               </button>
+              </a>
             </div>
           </div>
         </div>

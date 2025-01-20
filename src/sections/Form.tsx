@@ -3,6 +3,8 @@
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import logo from '@/assets/images/logo.png';
+import Image from "next/image";
 
 
 import {
@@ -53,8 +55,11 @@ export default function ContactFormPreview() {
   };
 
   return (
-    <div id="form" className="flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4">
-      <Card className="mx-auto max-w-md bg-gray-800 text-white ">
+    <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8">
+      <div className='max-w-xl mx-auto hidden md:block'>
+          <h2 className='text-8xl'>✉️</h2>
+        </div>
+      <Card className="self-start mx-auto max-w-xl bg-gray-800 text-white ">
         <CardHeader>
           <CardTitle className="text-2xl">Contact Us</CardTitle>
           <CardDescription className='text-white'>
@@ -119,6 +124,7 @@ export default function ContactFormPreview() {
                           id="message"
                           placeholder="Your message..."
                           autoComplete="off"
+                          rows={8}
                           {...field}
                         />
                       </FormControl>

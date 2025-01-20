@@ -55,7 +55,7 @@ const Edits = () => {
         <SectionHeader
           title="Take a Look Around"
           eyebrow="Videos & Clips"
-          description="Take a look at some of my latest videos and edits, showcasing my expertise in storytelling and visual creativity."
+          description="Some of my latest videos and edits, showcasing my expertise in storytelling and visual creativity."
         />
 
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
@@ -83,7 +83,7 @@ const Edits = () => {
                       </div>
                     </div>
                     
-                    <div className="w-[400px] mt-4">
+                    <div className="md:w-[400px] mt-4">
                       <CldVideoPlayer
                         width="1920"
                         height="1080"
