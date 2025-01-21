@@ -9,7 +9,12 @@ import { CldVideoPlayer } from "next-cloudinary";
 import "next-cloudinary/dist/cld-video-player.css";
 import logo from "@/assets/images/logo.png";
 
+import useLanguageStore from "@/lib/useLanguageStore";
+
 const Edits = () => {
+
+  const { language } = useLanguageStore();
+
   const edits = [
     {
       name: "JP plus+",
@@ -32,13 +37,15 @@ const Edits = () => {
     
   ];
 
+  
+
   return (
     <div className="py-1 lg:py-24">
       <div className="container">
         <SectionHeader
-          title="Take a Look Around"
+          title={language === "de" ? "Take a Look Around" : "Schau dich um"}
           eyebrow="Videos & Clips"
-          description="Some of my latest videos and edits, showcasing my expertise in storytelling and visual creativity."
+          description={language === "de" ? "Some of my videos and edits, showcasing my expertise in storytelling and visual creativity." : "Hier sind einige meiner Videos und Clips."  }
         />
 
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
@@ -48,7 +55,7 @@ const Edits = () => {
                 {edits.map((edit) => (
                   <Card
                     key={edit.name}
-                    className="max-w-xs md:max-w-xl mt-6 hover:scale-105 transition duration-300"
+                    className="max-w-[400px] w-[300px] md:w-auto md:max-w-xl mt-6 hover:scale-105 transition duration-300"
                   >
                     <div className="flex gap-4 items-center">
                       <div className="flex size-14 bg-gray-700 items-center justify-center rounded-full flex-shrink-0">

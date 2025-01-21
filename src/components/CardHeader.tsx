@@ -16,7 +16,7 @@ const CardHeader = ({
                 <StarIcon className="size-9 text-emerald-400"/>
                 <h3 className="font-serif text-3xl">{title}</h3>
               </div>
-              <p className="text-sm text-white/60 mt-2 lg:max-w-xs">{description}</p>
+              <p className="text-sm text-white/60 mt-2 lg:max-w-[300px]">{description}</p>
             </div>
   )
 }

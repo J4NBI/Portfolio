@@ -3,8 +3,8 @@
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import logo from '@/assets/images/logo.png';
-import Image from "next/image";
+import useLanguageStore from "@/lib/useLanguageStore";
+
 
 
 import {
@@ -54,6 +54,8 @@ export default function ContactFormPreview() {
       form.reset();
   };
 
+  const { language } = useLanguageStore();
+
   return (
     <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8 z-50">
       <div className='max-w-xl mx-auto hidden md:block'>
@@ -61,9 +63,9 @@ export default function ContactFormPreview() {
         </div>
       <Card className="self-start mx-auto max-w-xl bg-gray-800 text-white ">
         <CardHeader>
-          <CardTitle className="text-2xl">Contact Us</CardTitle>
-          <CardDescription className='text-white'>
-            Please fill out the form below and we will get back to you shortly.
+          <CardTitle className="text-2xl mb-2 font-bold">{language === "de" ? "Contact me" : "Kontaktiere mich"}</CardTitle>
+          <CardDescription className='text-white/60'>
+            {language === "de" ?  "Please fill out the form below and I will get back to you shortly." : "Fülle bitte das Formular aus und ich werde mich so schnell wie möglich bei dir melden."}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -118,11 +120,11 @@ export default function ContactFormPreview() {
                   name="message"
                   render={({ field }) => (
                     <FormItem className="grid gap-2">
-                      <FormLabel htmlFor="message">Message</FormLabel>
+                      <FormLabel htmlFor="message">{language === "de" ? "Message" : "Deine Nachricht" }</FormLabel>
                       <FormControl>
                         <Textarea
                           id="message"
-                          placeholder="Your message..."
+                          placeholder={language === "de" ? "Your message..." : "Deine Nachricht..." }
                           autoComplete="off"
                           rows={8}
                           {...field}
@@ -133,8 +135,8 @@ export default function ContactFormPreview() {
                   )}
                 />
 
-                <Button type="submit" className="w-32 mx-auto">
-                  Send Message
+                <Button type="submit" className="w-auto mx-auto px-6 hover:shadow-3xl">
+                  {language === "de" ? "Send Message" : "Nachricht senden"}
                 </Button>
               </div>
             </form>

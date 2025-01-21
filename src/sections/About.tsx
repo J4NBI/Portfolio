@@ -16,6 +16,7 @@ import ToolboxItems from "@/components/ToolboxItems";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useRef, useEffect} from "react";
 
+import useLanguageStore from "@/lib/useLanguageStore";
 
 const toolboxItems = [
   {
@@ -93,12 +94,59 @@ const hobbies = [
   },
 ];
 
+const hobbiesDE = [
+  {
+    title: "Gitarre",
+    emoji: "🎸",
+    left: "5%",
+    top: "5%",
+  },
+  {
+    title: "Programmieren",
+    emoji: "💻",
+    left: "50%",
+    top: "25%",
+  },
+  {
+    title: "Bücher",
+    emoji: "📚",
+    left: "10%",
+    top: "35%",
+  },
+  {
+    title: "Longboard",
+    emoji: "🛹",
+    left: "60%",
+    top: "52%",
+  },
+  {
+    title: "Kleine Tochter",
+    emoji: "👧",
+    left: "35%",
+    top: "75%",
+  },
+  {
+    title: "Natur",
+    emoji: "🌳",
+    left: "5%",
+    top: "65%",
+  },
+  {
+    title: "Kochen",
+    emoji: "🥗",
+    left: "55%",
+    top: "5%",
+  },
+];
+
 export const AboutSection = () => {
   const constainRef = useRef(null);
   const imageRef = useRef(null);
   const isInView = useInView(imageRef, { once: true });
 
   const bookFade = useAnimation()
+
+  const { language } = useLanguageStore();
 
   useEffect(() => {
     if(isInView){
@@ -111,15 +159,15 @@ export const AboutSection = () => {
 
       <div className="container">
         <SectionHeader
-          eyebrow="About me"
-          title="A Glimpse Into My World"
-          description="Learn mor eabout who I am, what I do, and what inspires me. "
+          eyebrow={language === "de" ? "About me" : "Über mich"}
+          title={language ==="de" ? "A Glimpse Into My World" : "Ein Blick in meine Welt"}
+          description={language === "de" ? "Who I am, what I do, and what inspires me." :"Wer ich bin, was ich tue und was mich inspiriert."}
         />
         <div className="mt-20 flex flex-col gap-6">
 
           <div className="md:flex items-center justify-center gap-8">
             <Card className="h-[320px] flex-shrink-0 mb-6 md:mb-0 md:pt-6">
-              <CardHeader title="My Reads" description="What I'm currently reading."/>
+              <CardHeader title={language ==="de" ? "Books" : "Bücher"} description={language === "de" ? "What I'm currently reading." : "Was ich gerade lese." }/>
               <div className="w-40 mx-auto mt-8">
                 <motion.div
                   ref={imageRef}
@@ -139,7 +187,7 @@ export const AboutSection = () => {
               </div>
             </Card>
             <Card className="h-[320px] w-full ">
-              <CardHeader className="md:px-6 md:pt-0" title="My Toolbox" description="Explore the technologies and tools I use to create digital experinces."/>
+              <CardHeader className="md:px-6 md:pt-0" title={language === "de" ? "My Toolbox" : "Meine Toolbox" } description={language === "de" ? "Explore the technologies and tools I use to create digital experinces." : "Entdecken Sie die Technologien und Tools, die ich verwende, um digitale Erlebnisse zu schaffen." }/>
               <ToolboxItems items={toolboxItems} className="mt-6 md:mt-10" itemsWrapperClassName="animate-move-left-two [animation-duration:35s]"/>
               <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName=" -translate-x-1/2 animate-move-right [animation-duration:35s]"/>
             </Card>
@@ -147,9 +195,26 @@ export const AboutSection = () => {
 
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <Card className="h-[320px] p-0 flex flex-col mb-6">
-            <CardHeader className="px-6 py-6" title="Beyond the Code" description="Explore my interests and hobbies besyyond the digital realm."/>
+            <CardHeader className="px-6 py-6" title={language === "de" ? "Beyond the Code" : "Meine Hobbys" } description={language === "de" ? "Explore my interests and hobbies besyyond the digital realm." : "Erfahre mehr über meine Interessen und Hobbys jenseits der digitalen Welt." }/>
             <div className="relative flex-1" ref={constainRef}>
-                {hobbies.map(hobby => (
+                {language === "de" ? hobbies.map(hobby => (
+                  <div key={hobby.title} >
+                    <motion.div className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
+                    style={{
+                      left: hobby.left,
+                      top: hobby.top
+                    }}
+                    drag
+                    dragConstraints={constainRef}
+                    >
+                      <span className="font-medium text-gray-950">
+                        {hobby.title}
+                      </span>
+                      <span>{hobby.emoji}</span>
+                    </motion.div>
+                  </div>
+                )) :
+                hobbiesDE.map(hobby => (
                   <div key={hobby.title} >
                     <motion.div className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5" key={hobby.title}
                     style={{
@@ -166,6 +231,7 @@ export const AboutSection = () => {
                     </motion.div>
                   </div>
                 ))}
+                
               </div>
             </Card>
             <Card className="h-[320px] p-0 relative">

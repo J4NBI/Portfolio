@@ -1,20 +1,38 @@
+'use client'
 import StarIcon from '@/assets/icons/star.svg'
 import { Fragment } from 'react';
 
-const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Responsive"
-,  "Interactive",
-  "User Friendlx",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
-]
+import useLanguageStore from "@/lib/useLanguageStore";
+
+const words = {
+  en:[
+    "Performant",
+    "Accessible",
+    "Secure",
+    "Responsive"
+  ,  "Interactive",
+    "User Friendlx",
+    "Search Optimized",
+    "Usable",
+    "Reliable",
+  ],
+  de: [
+    "Leistungsfähig",
+    "Zugänglich",
+    "Sicher",
+    "Reaktionsschnell",
+    "Interaktiv",
+    "Benutzerfreundlich",
+    "Suchmaschinenoptimiert",
+    "Benutzbar",
+    "Zuverlässig",
+  ]
+}
 
 export const TapeSection = () => {
+
+  const { language } = useLanguageStore();
+
   return (
   <div className="py-16 lg:py-24 overflow-x-clip">
     <div className='bg-gradient-to-r from-emerald-300 to-sky-400 -rotate-3 -mx-1'>
@@ -23,12 +41,18 @@ export const TapeSection = () => {
         >
           {[...new Array(2)].fill(0).map((_,idx)=> (
             <Fragment key={idx}>
-              {words.map((word) => (
+              {language === "de" ? words.en.map((word) => (
+            <div className='inline-flex gap-4 items-center' key={word}>
+              <span className='text-gray-900 uppercase font-extrabold text-sm'>{word}</span>
+              <StarIcon className="size-6 text-gray-900 -rotate-12" />
+            </div>
+          )) : words.de.map((word) => (
             <div className='inline-flex gap-4 items-center' key={word}>
               <span className='text-gray-900 uppercase font-extrabold text-sm'>{word}</span>
               <StarIcon className="size-6 text-gray-900 -rotate-12" />
             </div>
           ))}
+              {}
             </Fragment>
           ))}
           

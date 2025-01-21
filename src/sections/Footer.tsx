@@ -1,4 +1,7 @@
+'use client';
+
 import ArrowUpRight from '@/assets/icons/arrow-up-right.svg'
+import useLanguageStore from "@/lib/useLanguageStore";
 
 const footerLinks =[
   
@@ -14,6 +17,8 @@ const footerLinks =[
 
 
 export const Footer = () => {
+
+  const { language } = useLanguageStore();
   return (
     <footer>
       <div className='relative overflow-x-clip'>
@@ -33,7 +38,7 @@ export const Footer = () => {
             </nav>
             <div className='flex gap-8 z-50'>
               <a href="impressum" target="_blank">Impressum</a>
-              <a href="/datenschutz.pdf" target="_blank">Datenschutz</a>
+              <a href="/datenschutz.pdf" target="_blank">{language === "de" ? "Privacy Policy" : "Datenschutzerklärung"}</a>
           </div>
             
           </div>

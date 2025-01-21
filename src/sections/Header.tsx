@@ -3,9 +3,11 @@
 import React from 'react';
 import { useState } from 'react';
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import useLanguageStore from "@/lib/useLanguageStore";
 
 export const Header = () => {
-  const [isActive, SetIsActive] = useState(
+  const { language } = useLanguageStore();
+  const [isActive, SetIsActive] = useState(language === "de" ?
     [
       {
         name: "Home",
@@ -27,7 +29,31 @@ export const Header = () => {
         url: "#contact",
         active: false
       },
+    ] :
+
+    [
+      {
+        name: "Startseite",
+        url: "#home",
+        active: true
+      },
+      {
+        name: "Projekte",
+        url: "#projects",
+        active: false
+      },
+      {
+        name: "",
+        url: "#about",
+        active: false
+      },
+      {
+        name: "Contact",
+        url: "#contact",
+        active: false
+      },
     ]
+    
   );
   const bg = isActive ? "red" : "green";
 

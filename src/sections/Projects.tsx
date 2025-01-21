@@ -1,3 +1,5 @@
+'use client';
+
 import modal from '@/assets/images/work/01_Login_Modal.png'
 import estate from '@/assets/images/work/02_Estate.png'
 import assembly from '@/assets/images/work/03_Assembly.png'
@@ -8,6 +10,9 @@ import CheckCircleIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+
+import useLanguageStore from "@/lib/useLanguageStore";
+
 
 const portfolioProjects = [
   {
@@ -65,10 +70,13 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
+
+  const { language } = useLanguageStore();
+
   return (
     <section id="projects" className="pb-16 lg:py-20">
       <div className="container">
-        <SectionHeader eyebrow="Real-world Results" title="Featured Projects" description="See how I transformed concepts into engaging experience."/>
+        <SectionHeader eyebrow={language === "de" ? "Real-world Results" : "Praktische Ergebnisse"} title={language === "de" ? "Featured Projects" : "Ausgewählte Projekte"} description={language === "de" ? "Here is a small presentation of my work" : "Hier eine kleine präsentation meiner Arbeiten"}/>
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, index) => (
             <Card
@@ -95,18 +103,18 @@ export const ProjectsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <div className='flex gap-4 md:flex-row flex-col'>
+                <div className='flex md:gap-4 md:flex-row flex-col'>
                   <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-[200px] mx-auto md:w-auto rounded-xl
                     font-semibold flex justify-center gap-2 items-center mt-8 px-6 hover:shadow-3xl">
-                      <span>Visit Live Site</span>
+                      <span>{language === "de" ? "Visit Live Site" : "Webseite"}</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
                   <a href={project.github} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-[200px] mx-auto md:w-auto rounded-xl
                     font-semibold flex justify-center gap-2 items-center mt-8 px-6 hover:shadow-3xl">
-                      <span>View Code</span>
+                      <span>{language === "de" ? "View Code" : "Zum Code"}</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
