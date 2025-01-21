@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useState } from 'react';
-
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export const Header = () => {
   const [isActive, SetIsActive] = useState(
@@ -51,6 +51,7 @@ export const Header = () => {
       {isActive.map((link)=> (
         <a onClick={() => handleClick(link.name)} id={link.name} key={link.name} href={link.url}  className={`nav-item ${ link.active ? navbarActiveStyle : null}`}>{link.name}</a>
       ))}
+      <LanguageSwitcher />
     </nav>
   </div>;
 };

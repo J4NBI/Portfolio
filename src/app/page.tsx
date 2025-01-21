@@ -8,6 +8,7 @@ import { Footer } from "@/sections/Footer";
 import ContactForm from "@/sections/Form";
 import Edits from "@/sections/Edits";
 
+
 export default function Home() {
   return (
     <div>

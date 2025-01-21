@@ -6,8 +6,17 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import { motion } from "framer-motion";
+import useLanguageStore from "@/lib/useLanguageStore";
 
 export const HeroSection = () => {
+  
+  const { language } = useLanguageStore();
+
+  const texts = {
+    en: (<> I am Jan, a creative mind from Berlin with a background in media design. After earning my degree as an editor at the Film Academy and spending years as a freelance editor, <br /> I discovered my passion for graphic design and web development. Today, I combine my technical expertise and creative vision to design unique, functional websites.</>),
+    de: "Ich bin Jan, ein kreativer Kopf aus Berlin mit einem Hintergrund in Mediengestaltung und einem Diplom in Montage/Schnitt. Nach Jahren als freier Editor habe ich meine Leidenschaft für Grafikdesign und Webentwicklung entdeckt. Heute kombiniere ich mein technisches Know-how und meine kreative Vision, um ansprechende und funktionale Webseiten zu gestalten."
+  }
+
   return (
     <div id="home">
       <div className="py-32 md:py-48 lg:py-60 relative -z-2 overflow-x-clip">
@@ -82,7 +91,7 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 bg-green-500 rounded-full animate-ping-large"></div>
               </div>
               <div className="text-sm font-semibold">
-                Availabel for new projects
+                {language === "de" ? "Availabel for new projects" : "Verfügbar für neue Projekte"}
               </div>
             </div>
           </motion.div>
@@ -101,19 +110,16 @@ export const HeroSection = () => {
             }}
           >
             <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-              Frontend{" "}
+              Frontend{" "} 
               <span className="text-emerald-300 leading-10">Developer</span>
               {/* <hr className="my-2" /> */}
                
             </h1>
     
             <p className="mt-4 text-center text-white/80 md:text-lg">
-              I am Jan, a creative mind from Berlin with a background in media
-              design. After earning my degree as an editor at the Film Academy
-              and spending years as a freelance editor,<br/> I discovered my passion
-              for graphic design and web development. Today, I combine my
-              technical expertise and creative vision to design unique,
-              functional websites.
+
+            {language === "de" ? texts.en : texts.de}
+              
             </p>
           </motion.div>
 
@@ -134,7 +140,8 @@ export const HeroSection = () => {
                   }}
                   whileTap={{ scale: 0.9, rotate: 3 }}
                 >
-                  <span className="font-semibold">Explore My Work</span>
+                  <span className="font-semibold">
+                    {language === "de" ? "Explore My Work":"Meine Projekte"}</span>
                   <ArrowDown className="size-4" />
                 </motion.button>
               </a>
