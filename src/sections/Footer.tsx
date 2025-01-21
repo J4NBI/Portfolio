@@ -6,6 +6,10 @@ const footerLinks =[
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/jan-bihl-ab1ba330/"
   },
+  {
+    title: "GitHub",
+    href: "https://github.com/J4NBI"
+  },
 ]
 
 

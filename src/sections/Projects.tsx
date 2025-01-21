@@ -20,6 +20,7 @@ const portfolioProjects = [
       { title: "Tailwind" },
     ],
     link: "https://j4nbi.github.io/login_modal_Tailwind/",
+    github: "https://github.com/J4NBI/login_modal_Tailwind",
     image: modal,
   },
   {
@@ -32,6 +33,7 @@ const portfolioProjects = [
       { title: "Motion" },
     ],
     link: "https://j4nbi.github.io/real-estate/",
+    github:"https://github.com/J4NBI/real-estate",
     image: estate,
   },
   {
@@ -44,6 +46,7 @@ const portfolioProjects = [
       { title: "Responsive" },
     ],
     link: "https://j4nbi.github.io/assembly_endgame_v2/",
+    github:"https://github.com/J4NBI/assembly_endgame_v2",
     image: assembly,
   },
   {
@@ -56,6 +59,7 @@ const portfolioProjects = [
       { title: "Motion" },
     ],
     link: "#home",
+    github:"https://github.com/J4NBI/Portfolio",
     image: janbihl,
   },
 ];
@@ -91,13 +95,22 @@ export const ProjectsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <a href={project.link} target="_blank">
-                  <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl
-                  font-semibold flex justify-center gap-2 items-center mt-8 px-6">
-                    <span>Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-4" />
-                  </button>
-                </a>
+                <div className='flex gap-4 md:flex-row flex-col'>
+                  <a href={project.link} target="_blank">
+                    <button className="bg-white text-gray-950 h-12 w-[200px] mx-auto md:w-auto rounded-xl
+                    font-semibold flex justify-center gap-2 items-center mt-8 px-6 hover:shadow-3xl">
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-4" />
+                    </button>
+                  </a>
+                  <a href={project.github} target="_blank">
+                    <button className="bg-white text-gray-950 h-12 w-[200px] mx-auto md:w-auto rounded-xl
+                    font-semibold flex justify-center gap-2 items-center mt-8 px-6 hover:shadow-3xl">
+                      <span>View Code</span>
+                      <ArrowUpRightIcon className="size-4" />
+                    </button>
+                  </a>
+                </div>
               </div>
               <div className="relative">
                 <Image className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" src={project.image} alt={project.title} />

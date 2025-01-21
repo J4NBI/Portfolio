@@ -24,7 +24,7 @@ const Edits = () => {
       link: "OBI_Mach_es_zu_deinem_Projekt_hxkodo",
     },
     {
-      name: "CEDEO",
+      name: "Envie de",
       text: "Bathroom",
       logo: logo,
       link: "CEDEO_FACTORY_k17ig4",
@@ -42,7 +42,7 @@ const Edits = () => {
         />
 
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:160s] hover:[animation-play-state:paused]">
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
             {[...new Array(4)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {edits.map((edit) => (
