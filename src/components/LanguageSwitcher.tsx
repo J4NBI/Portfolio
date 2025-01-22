@@ -6,7 +6,7 @@ const LanguageSwitcher = () => {
   const { language, toggleLanguage } = useLanguageStore();
 
   return (
-    <button className='text-md mx-4' onClick={toggleLanguage}>
+    <button className='text-lg mx-4' onClick={toggleLanguage}>
       {language === 'de' ? '🇬🇧' : '🇩🇪'}
       {/* {language === 'de' ? 'Eng' : 'DE'} */}
     </button>

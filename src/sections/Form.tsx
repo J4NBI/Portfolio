@@ -157,7 +157,7 @@ export default function ContactFormPreview() {
                       I have read the{" "}
                       <a
                         href="datenschutz.pdf" target="_blank"
-                        className="text-blue-500 underline"
+                        className="text-emerald-300"
                       >
                         privacy policy
                       </a>
@@ -168,7 +168,7 @@ export default function ContactFormPreview() {
                         Ich habe die{" "}
                         <a
                           href="datenschutz.pdf" target="_blank"
-                          className="text-blue-500 underline"
+                          className="text-emerald-300"
                         >
                           Datenschutzerklärung
                         </a>{" "}
