@@ -36,7 +36,7 @@ export const Header = () => {
     
     const updatedLinks = [
       {
-        name: language === "de"  ? "Home" : "Startseite",
+        name: language === "de"  ? "Home" : "Home",
         url: "#home",
         active: true
       },
