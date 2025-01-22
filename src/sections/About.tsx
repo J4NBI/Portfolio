@@ -239,7 +239,7 @@ export const AboutSection = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 ">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
                   <Image className="size-20 " src={hero} alt="hero image" />
-                  <h2 className="text-bold text-black mt-2 mx-4 absolute font-sans md:hidden">BERLIN</h2>
+                  <h2 className="text-bold text-black/50 mt-2 mx-4 absolute font-sans lg:hidden">BERLIN</h2>
                 </div>
             </Card>
           </div>

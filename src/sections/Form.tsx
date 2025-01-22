@@ -27,6 +27,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { sendEmail } from '@/app/api/send-email'
 
+
 // Schema for contact form validation
 const formSchema = z.object({
   name: z
@@ -57,7 +58,7 @@ export default function ContactFormPreview() {
   const { language } = useLanguageStore();
 
   return (
-    <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8 z-50">
+    <div id="form" className="container flex min-h-[60vh] mb-20 h-full w-full items-center justify-center px-4 mt-8 z-5 ">
       <div className='max-w-xl mx-auto hidden md:block'>
           <h2 className='text-8xl'>✉️</h2>
         </div>
@@ -92,7 +93,7 @@ export default function ContactFormPreview() {
                     </FormItem>
                   )}
                 />
-
+                
                 {/* Email Field */}
                 <FormField
                   control={form.control}
@@ -134,11 +135,11 @@ export default function ContactFormPreview() {
                     </FormItem>
                   )}
                 />
-
-                <Button type="submit" className="w-auto mx-auto px-6 hover:shadow-3xl">
+                <Button type="submit" className="w-auto mx-auto px-6 hover:shadow-3xl active:scale-90">
                   {language === "de" ? "Send Message" : "Nachricht senden"}
                 </Button>
               </div>
+              
             </form>
           </Form>
         </CardContent>
