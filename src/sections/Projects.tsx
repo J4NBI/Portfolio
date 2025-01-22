@@ -3,7 +3,7 @@
 import modal from '@/assets/images/work/01_Login_Modal.png'
 import estate from '@/assets/images/work/02_Estate.png'
 import assembly from '@/assets/images/work/03_Assembly.png'
-import janbihl from '@/assets/images/work/04_JanBihl.png'
+import janbihl from '@/assets/images/work/04_janbihl.png'
 
 import Image from "next/image";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg'
