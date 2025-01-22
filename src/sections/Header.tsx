@@ -46,7 +46,7 @@ export const Header = () => {
         active: false
       },
       {
-        name: language === "de" ? "About" : "Über mich",
+        name: language === "de" ? "About" : "About",
         url: "#about",
         active: false
       },
