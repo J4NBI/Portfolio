@@ -144,7 +144,7 @@ export const AboutSection = () => {
   const imageRef = useRef(null);
   const isInView = useInView(imageRef, { once: true });
 
-  const bookFade = useAnimation()
+  const bookFade = useAnimation();
 
   const { language } = useLanguageStore();
 
@@ -152,7 +152,7 @@ export const AboutSection = () => {
     if(isInView){
       bookFade.start("visible")
     }
-  }, [isInView]);
+  }, [isInView, bookFade]);
     
   return (
     <div id="about" className="pb-20 pt-20">

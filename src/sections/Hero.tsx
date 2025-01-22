@@ -164,7 +164,7 @@ export const HeroSection = () => {
                 >
                   <div className="w-full h-full flex items-center gap-2 justify-center">
                     <span>👋</span>
-                    <span className="font-semibold">Let's Connect</span>
+                    <span className="font-semibold">Let&apos;s Connect</span>
                   </div>
                 </motion.button>
               </a>
