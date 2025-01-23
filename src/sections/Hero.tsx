@@ -1,5 +1,5 @@
 "use client";
-import memojiImage from "@/assets/images/jan_alpha.png";
+import memojiImage from "@/assets/images/jan_02.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";

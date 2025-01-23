@@ -10,7 +10,7 @@ import HTMLIcon from '@/assets/icons/html5.svg';
 import ChromeIcon from '@/assets/icons/chrome.svg';
 import GithubIcon from '@/assets/icons/github.svg'
 import mapImage from '@/assets/images/map.png';
-import hero from '@/assets/images/jan_alpha_green.png'
+import hero from '@/assets/images/memoji-smile.png'
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -238,8 +238,8 @@ export const AboutSection = () => {
                 <Image className="h-full w-full object-cover object-left-top" src={mapImage} alt="map" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30 ">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
-                  <Image className="size-20 " src={hero} alt="hero image" />
-                  <h2 className="text-bold text-black/50 mt-2 mx-4 absolute font-sans lg:hidden">BERLIN</h2>
+                  <Image className="size-12" src={hero} alt="hero image" />
+                  <h2 className="text-sm text-bold text-black/50 mr-6 absolute font-sans lg:hidden">BERLIN</h2>
                 </div>
             </Card>
           </div>
