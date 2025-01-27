@@ -8,7 +8,7 @@ interface LanguageState {
 
 // Erstelle den Zustand mit Typisierung
 const useLanguageStore = create<LanguageState>((set) => ({
-  language: 'de', // Standardmäßig Deutsch
+  language: 'en', // Standardmäßig Deutsch
   toggleLanguage: () => set((state) => ({
     language: state.language === 'de' ? 'en' : 'de',
   })),

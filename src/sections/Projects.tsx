@@ -3,7 +3,7 @@
 import modal from '@/assets/images/work/01_Login_Modal.png'
 import estate from '@/assets/images/work/02_Estate.png'
 import assembly from '@/assets/images/work/03_Assembly.png'
-import janbihl from '@/assets/images/work/04_janbihl_02.png'
+import janbihl from '@/assets/images/work/04_janbihl.png'
 
 import Image from "next/image";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg'
@@ -76,7 +76,7 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="pb-16 lg:py-20">
       <div className="container">
-        <SectionHeader eyebrow={language === "de" ? "Real-world Results" : "Praktische Ergebnisse"} title={language === "de" ? "Featured Projects" : "Ausgewählte Projekte"} description={language === "de" ? "Here is a small presentation of my work" : "Hier eine kleine präsentation meiner Arbeiten"}/>
+        <SectionHeader eyebrow={language === "de" ? "Real-world Results" : "Praktische Erfahrungen"} title={language === "de" ? "Featured Projects" : "Ausgewählte Projekte"} description={language === "de" ? "Here is a small presentation of my work" : "Hier eine kleine Präsentation meiner Arbeiten"}/>
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map((project, index) => (
             <Card

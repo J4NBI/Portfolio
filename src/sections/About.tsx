@@ -187,7 +187,7 @@ export const AboutSection = () => {
               </div>
             </Card>
             <Card className="h-[320px] w-full ">
-              <CardHeader className="md:px-6 md:pt-0" title={language === "de" ? "My Toolbox" : "Meine Toolbox" } description={language === "de" ? "Explore the technologies and tools I use to create digital experinces." : "Entdecken Sie die Technologien und Tools, die ich verwende, um digitale Erlebnisse zu schaffen." }/>
+              <CardHeader className="md:px-6 md:pt-0" title={language === "de" ? "My Toolbox" : "Meine Toolbox" } description={language === "de" ? "Explore the technologies and tools I use to create digital experinces." : "Entdecke die Technologien und Tools, die ich verwende, um digitale Erlebnisse zu schaffen." }/>
               <ToolboxItems items={toolboxItems} className="mt-6 md:mt-10" itemsWrapperClassName="animate-move-left-two [animation-duration:35s]"/>
               <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName=" -translate-x-1/2 animate-move-right [animation-duration:35s]"/>
             </Card>

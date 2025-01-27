@@ -7,7 +7,7 @@ const LanguageSwitcher = () => {
 
   return (
     <button className='text-lg mx-4' onClick={toggleLanguage}>
-      {language === 'de' ? '🇬🇧' : '🇩🇪'}
+      {language === 'de' ? '🇩🇪' : '🇬🇧'}
       {/* {language === 'de' ? 'Eng' : 'DE'} */}
     </button>
   );
