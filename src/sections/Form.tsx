@@ -67,7 +67,7 @@ export default function ContactFormPreview() {
           <CardTitle className="text-2xl mb-2 font-bold">
             {language === "de" ? "Contact me" : "Kontaktiere mich"}
           </CardTitle>
-          <CardDescription className="text-white/60">
+          <CardDescription className="text-white/60 max-w-sm">
             {language === "de"
               ? "Please fill out the form below and I will get back to you shortly."
               : "Fülle bitte das Formular aus und ich werde mich so schnell wie möglich bei dir melden."}
