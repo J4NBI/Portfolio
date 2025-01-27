@@ -60,18 +60,18 @@ const hobbies = [
     title: "Coding",
     emoji: "💻",
     left: "50%",
-    top: "25%",
+    top: "30%",
   },
   {
     title: "Books",
     emoji: "📚",
     left: "10%",
-    top: "35%",
+    top: "30%",
   },
   {
     title: "Longboard",
     emoji: "🛹",
-    left: "60%",
+    left: "50%",
     top: "52%",
   },
   {
@@ -84,7 +84,7 @@ const hobbies = [
     title: "Nature",
     emoji: "🌳",
     left: "5%",
-    top: "65%",
+    top: "55%",
   },
   {
     title: "Cooking",
@@ -104,19 +104,19 @@ const hobbiesDE = [
   {
     title: "Programmieren",
     emoji: "💻",
-    left: "50%",
-    top: "25%",
+    left: "40%",
+    top: "30%",
   },
   {
     title: "Bücher",
     emoji: "📚",
-    left: "10%",
+    left: "0%",
     top: "35%",
   },
   {
     title: "Longboard",
     emoji: "🛹",
-    left: "60%",
+    left: "51%",
     top: "52%",
   },
   {
