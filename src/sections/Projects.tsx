@@ -4,6 +4,7 @@ import modal from '@/assets/images/work/01_Login_Modal.png'
 import estate from '@/assets/images/work/02_Estate.png'
 import assembly from '@/assets/images/work/03_Assembly.png'
 import janbihl from '@/assets/images/work/04_janbihl.png'
+import ToDo from '@/assets/images/work/05_ToDo.png'
 
 import Image from "next/image";
 import CheckCircleIcon from '@/assets/icons/check-circle.svg'
@@ -40,6 +41,19 @@ const portfolioProjects = [
     link: "https://j4nbi.github.io/real-estate/",
     github:"https://github.com/J4NBI/real-estate",
     image: estate,
+  },
+  {
+    company: "ToDo App",
+    year: "2024",
+    title: "A little ToDo App",
+    results: [
+      { title: "Fullstack" },
+      { title: "REST API" },
+      { title: "Deployed" },
+    ],
+    link: "https://fullstack-to-do-app-frontend-bice.vercel.app/",
+    github:"https://github.com/J4NBI/Fullstack_ToDoApp_backend.git",
+    image: ToDo,
   },
   {
     company: "Game",
