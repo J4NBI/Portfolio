@@ -13,6 +13,10 @@ const footerLinks =[
     title: "GitHub",
     href: "https://github.com/J4NBI"
   },
+  {
+    title: "Editor Page",
+    href: "https://shiny-mermaid-029f94.netlify.app/"
+  },
 ]
 
 
