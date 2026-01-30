@@ -37,7 +37,7 @@ const portfolioProjects = [
     company: "ToDo App",
     year: "2026",
     title: "A little ToDo App",
-    results: [{ title: "Deployed" }],
+    results: [{ title: "React" }, { title: "Tailwind" }, { title: "Deployed" }],
     link: "https://taskmangerv2.netlify.app/",
     github: "https://github.com/J4NBI/TaskManager",
     image: ToDo,
