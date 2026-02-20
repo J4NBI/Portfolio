@@ -5,6 +5,7 @@ import estate from "@/assets/images/work/02_Estate.png";
 import assembly from "@/assets/images/work/03_Assembly.png";
 import janbihl from "@/assets/images/work/04_janbihl.png";
 import ToDo from "@/assets/images/work/05_ToDo_2026.png";
+import quizGame from "@/assets/images/work/06_QuizGame.png";
 
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -23,6 +24,19 @@ const portfolioProjects = [
     link: "https://multistepformv4.netlify.app/",
     github: "https://github.com/J4NBI/Multi_Step_Form",
     image: modal,
+  },
+  {
+    company: "Quize Game",
+    year: "2026",
+    title: "Quize Game",
+    results: [
+      { title: "React" },
+      { title: "Tailwind" },
+      { title: "Material UI" },
+    ],
+    link: "https://quizgame1234.netlify.app/",
+    github: "https://github.com/J4NBI/QuizGame",
+    image: quizGame,
   },
   {
     company: "Estate",
